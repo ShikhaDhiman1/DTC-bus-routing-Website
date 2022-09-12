@@ -1,18 +1,36 @@
-// function menu(){
-//     var first = document.getElementById("bars").firstChild;
-//     var second = document.getElementById("bars").firstChild.nextSibling;
-//     document.write(first+"  |  "+second);
-// }
-// document.getElementsByClassName("btn").a.color="rgb(135, 178, 186)";
-function hoverIcon(){
-    document.getElementById("icon").class="fa fa-caret-up";
-}
-function btnHover(){
-     document.getElementsByClassName("btn").first.css.color="rgb(135, 178, 186)";
-}
-function menu(){
-    document.getElementsByClassName("div-h").innerHTML = "<h2 >Quick Links</h2><a href=''>Miscellaneous</a> | <a href=''>Copyright Policy</a> | <a href=''>Feedback</a> | <a href=''>Hyperlink Policy</a> | <a href=''>Privacy Policy</a> | <a href=''>Terms & Conditions</a> |<a href=''>Terms of Use</a> |  <a href=''>Security Policy</a><br>";
-    
-    
-    alert(str);
-}
+const service = document.querySelector(".a-services")
+const div = document.querySelector(".div-services");
+// service.addEventListener('mouseover',function(){
+//     div.style.display = "block";
+//     div.classList.add("pos");
+//     document.querySelector(".fa.fa-caret-down").className = "fa fa-caret-up";
+// })
+service.addEventListener('focusin',function(){
+    div.style.display = "block";
+    div.classList.add("pos");
+    document.querySelector(".fa.fa-caret-down").className = "fa fa-caret-up";
+})
+service.addEventListener('focusout',function(){
+    div.style.display = "none";
+    document.querySelector(".fa.fa-caret-up").className = "fa fa-caret-down";
+})
+// service.addEventListener('click',function(){
+//     div.style.display = "none";
+//     document.querySelector(".fa.fa-caret-up").className = "fa fa-caret-down";
+// })
+// service.addEventListener('dblclick',function(){
+//     div.style.display = "none";
+//     document.querySelector(".fa.fa-caret-up").className = "fa fa-caret-down";
+// })
+
+const login = document.querySelector(".a-login");
+login.addEventListener('click', function(){
+    document.querySelector(".div-form").style.display = "block";
+    // document.querySelector(".div-form").classList.add("div-form-pos");
+    // document.querySelector("body").style.opacity = "0.5";
+    // document.querySelector(".div-form").style.opacity = "1";
+    // document.querySelector("form").style.opacity = "2";
+})
+document.querySelector(".cross").addEventListener('click',function(){
+    document.querySelector(".div-form").style.display = "none";
+})
