@@ -395,10 +395,26 @@ div.row{
     text-align: center;
     border-radius: 17px;
     box-shadow:0px 0px 10px rgb(39, 54, 55);
-    position:absolute;
-    top:-40px;
+    position:fixed;
+    top:10%;
     left:30%;
     color:rgb(38, 49, 49);
+    animation-name:show;
+    animation-timing-function: ease-out;
+    animation-duration: 0.7s;
+}
+@keyframes show {
+    0%{
+        top:0;
+        opacity: 0.3;
+    }
+    50%{
+        opacity:0.7;
+    }
+    100%{
+        top:10%;
+        opacity:1;
+    }
 }
 /* .div-form-pos{
     position:absolute;
